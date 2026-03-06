@@ -106,7 +106,7 @@ with st.sidebar:
         st.markdown(_sb_html, unsafe_allow_html=True)
     else:
         st.markdown("### 🌿 ICA — Área IIAD · LANIA")
-    st.markdown("**Homogeneidad ISO 17034:2017**")
+    st.markdown("**Homogeneidad ISO 17034 e ISO 33405**")
     st.markdown("---")
     st.markdown("#### ⚙️ Parámetros estadísticos")
     alpha       = st.select_slider("Nivel de significancia (α)", [0.01,0.05,0.10], value=0.05)
@@ -123,7 +123,7 @@ with st.sidebar:
             "Valor de u objetivo" + (" (%)" if "relativa" in u_obj_tipo else ""),
             min_value=0.0, value=0.5, format="%.6f", step=0.001
         )
-        st.caption("Criterio ISO Guide 35: u_hom < u_obj/3 → contribución despreciable")
+        st.caption("Criterio ISO 33405: u_hom < u_obj/3 → contribución despreciable")
     st.markdown("---")
     # Plantilla multi-componente
     st.markdown("#### 📥 Plantilla Excel")
